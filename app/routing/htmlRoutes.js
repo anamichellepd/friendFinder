@@ -1,5 +1,6 @@
 var path = require("path");
-
+var express = require("express");
+var app = express();
 module.exports = function(app) {
   //route to survey
   app.get("/survey", function(req, res) {
@@ -7,6 +8,6 @@ module.exports = function(app) {
   });
   //default route home
   app.use(function(req, res) {
-    res.sendFile(path.join(__dirname + "/../punlic/home.html"));
+    res.sendFile(path.join(__dirname + "/../public/home.html"));
   });
 };
