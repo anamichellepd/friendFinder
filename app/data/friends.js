@@ -1,14 +1,16 @@
-var PORT = process.env.PORT || 3000;
+var friendsArray = [
+  {
+    name: "Ana",
+    photolink:
+      "https://media.tenor.com/images/796e4aa7ee53b228ebb342164144caac/tenor.png",
+    scores: [1, 3, 5, 4, 2]
+  },
+  {
+    name: "Aaron",
+    photolink:
+      "https://s3.amazonaws.com/petcentral.com/wp-content/uploads/2016/12/30144814/cat-facts-940x503.jpg",
+    socres: [2, 3, 5, 4, 2]
+  }
+];
 
-const express = require("express");
-const app = express();
-
-app.get("/", function(req, res) {
-  res.send("Hello World");
-});
-
-app.listen(3000);
-
-app.get("/", function(req, res) {
-  res.json(path.join(__dirname, "public/index.html"));
-});
+module.exports = friendsArray;
